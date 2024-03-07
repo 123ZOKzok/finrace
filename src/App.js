@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import AppBar from "./components/AppBar/index"
+import Banner from "./components/Banner/index"
+import Button  from "./components/Button/index"
+import Date  from "./components/Date/index"
+import Row  from "./components/Row/index"
 
-function App() {
+
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <div className="w-full h-full flex flex-col justify-stretch items-stretch">
+    <AppBar />
+    <Banner />
+    <Button />
+    <Date />
+    <Row />
+  </div>
+  )
 }
-
-export default App;
