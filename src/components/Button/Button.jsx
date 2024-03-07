@@ -3,20 +3,21 @@ import PropTypes from "prop-types";
 
 const shapes = {
   square: "rounded-[0px]",
-  round: "rounded-[23px]",
+  round: "rounded-[6px]",
   circle: "rounded-[50%]",
 };
 const variants = {
   fill: {
-    white_A700: "bg-white-A700 text-white-A700_a8",
-    black_900: "bg-black-900",
+    white: "bg-white text-white",
+    black: "bg-black text-white",
+    red: "bg-red-500 text-white",
   },
   outline: {
-    red_A700: "border-red-A700 border border-solid",
+    red: "border-red-500 border border-solid",
   },
 };
 const sizes = {
-  md: "h-[874px] pr-[35px] text-base",
+  md: "h-[47px] px-[11x] text-base",
   sm: "h-[47px] px-[11px]",
   xs: "h-[32px] px-2",
 };
@@ -26,10 +27,10 @@ const Button = ({
   className = "",
   leftIcon,
   rightIcon,
-  shape = "square",
+  shape = "round",
   variant = "fill",
   size = "md",
-  color = "white_A700",
+  color = "white",
   ...restProps
 }) => {
   return (
@@ -52,7 +53,7 @@ Button.propTypes = {
   shape: PropTypes.oneOf(["square", "round", "circle"]),
   size: PropTypes.oneOf(["md", "sm", "xs"]),
   variant: PropTypes.oneOf(["fill", "outline"]),
-  color: PropTypes.oneOf(["white_A700", "black_900", "red_A700"]),
+  color: PropTypes.oneOf(["white", "black", "red"]),
 };
 
 export { Button };
