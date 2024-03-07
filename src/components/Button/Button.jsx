@@ -11,6 +11,7 @@ const variants = {
     white: "bg-white text-white",
     black: "bg-black text-white",
     red: "bg-red-500 text-white",
+    lightRed: "bg-red-300 text-white",
   },
   outline: {
     red: "border-red-500 border border-solid",
@@ -30,12 +31,12 @@ const Button = ({
   shape = "round",
   variant = "fill",
   size = "md",
-  color = "white",
+  color = "red",
   ...restProps
 }) => {
   return (
     <button
-      className={`${className} flex items-center justify-center text-center cursor-pointer ${(shape && shapes[shape]) || ""} ${(size && sizes[size]) || ""} ${(variant && variants[variant]?.[color]) || ""}`}
+      className={`${className} min-2-[50px] px-[12px] flex items-center justify-center text-center cursor-pointer ${(shape && shapes[shape]) || ""} ${(size && sizes[size]) || ""} ${(variant && variants[variant]?.[color]) || ""}`}
       {...restProps}
     >
       {!!leftIcon && leftIcon}
@@ -53,7 +54,7 @@ Button.propTypes = {
   shape: PropTypes.oneOf(["square", "round", "circle"]),
   size: PropTypes.oneOf(["md", "sm", "xs"]),
   variant: PropTypes.oneOf(["fill", "outline"]),
-  color: PropTypes.oneOf(["white", "black", "red"]),
+  color: PropTypes.oneOf(["white", "black", "red", "lightRed"]),
 };
 
 export { Button };

@@ -1,6 +1,5 @@
 import AppBar from "./components/AppBar/index";
 import Banner from "./components/Banner/index";
-import Button from "./components/Button/index";
 import BongaPointsPage from "./containers/BongaPointsPage/BongaPointsPage";
 
 export default function App() {
@@ -11,9 +10,6 @@ export default function App() {
         <div className="w-full flex flex-col bg-white">
           <Banner />
           <BongaPointsPage />
-          <div className="flex flex-row justify-stretch items-center px-10 pb-10">
-            <Button />
-          </div>
         </div>
       </div>
     </div>
