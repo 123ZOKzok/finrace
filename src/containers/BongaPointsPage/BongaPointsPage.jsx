@@ -20,7 +20,7 @@ function BongaPointsPage() {
 
   const handleFetchBongaPoints = async () => {
     try {
-      const response = await fetch("http://54.163.216.81:3000/api/v1/challenges");
+      const response = await fetch("http://54.163.216.81:4000/api/v1/challenges");
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }
