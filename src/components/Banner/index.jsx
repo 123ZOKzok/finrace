@@ -40,7 +40,7 @@ export default function BannerPage() {
           className="h-[16px] w-[16px]"
         />
         <Text size="sm" as="p" className="!text-gray-500 text-center">
-          24th August 2024
+          7th March 2024
         </Text>
       </div>
     </div>
